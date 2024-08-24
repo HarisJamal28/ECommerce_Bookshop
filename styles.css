@@ -1,0 +1,2818 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Bebas Neue;
+  background-color: #c5d9e3;
+}
+body .bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alert {
+  position: fixed;
+  top: 3%;
+  width: 300px;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1AA7EC;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.alert p {
+  font-size: 1.5rem;
+}
+
+main.Background.active {
+  filter: blur(20px);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.BookDeet {
+  position: absolute;
+  height: 70%;
+  width: 70%;
+  top: 40%;
+  left: 15%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1AA7EC;
+}
+.BookDeet .Frame {
+  width: 90%;
+  height: 90%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.BookDeet .Frame aside {
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+}
+.popup {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
+  background-color: #1AA7EC;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+.popup .close {
+  width: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+}
+.popup .close:hover {
+  background-color: white;
+  border: 0;
+  outline: invert;
+}
+.popup form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+.popup input {
+  margin: 5px;
+  height: 20px;
+  border: 0px;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+}
+.popup button {
+  background-color: white;
+  color: black;
+  height: 30px;
+  width: 50%;
+  border: 0px;
+  font-family: Bebas Neue;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.popup button:hover {
+  background-color: #1AA7EC;
+  border: 2px solid black;
+}
+
+#popup.active {
+  top: 25%;
+  visibility: visible;
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.popup1 {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
+  background-color: #1AA7EC;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+.popup1 .close {
+  width: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+}
+.popup1 .close:hover {
+  background-color: white;
+  border: 0;
+  outline: invert;
+}
+.popup1 div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.popup1 div input {
+  width: 110px;
+}
+.popup1 form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+.popup1 input {
+  margin: 5px;
+  height: 20px;
+  border: 0px;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+}
+.popup1 button {
+  background-color: white;
+  color: black;
+  height: 30px;
+  width: 50%;
+  border: 0px;
+  font-family: Bebas Neue;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.popup1 button:hover {
+  background-color: #1AA7EC;
+  border: 2px solid black;
+}
+
+#popup1.active {
+  top: 25%;
+  visibility: visible;
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+main {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  min-width: 100vw;
+}
+main nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+main nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.8rem;
+}
+main nav ul li {
+  position: relative;
+}
+main nav ul li .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  background-color: #1AA7EC;
+  padding: 0.3rem;
+  font-size: 0.6rem;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  color: white;
+}
+main nav ul li button {
+  border: 0;
+  background-color: white;
+  font-family: Bebas Neue;
+  text-decoration: none;
+  color: black;
+}
+main nav ul li button span {
+  padding: 5px;
+  color: white;
+  background-color: #1AA7EC;
+}
+main nav ul li:hover .cart_list {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main nav ul li .cart_list {
+  position: absolute;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 200px;
+  width: 200px;
+  left: -170px;
+  top: 20px;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  padding: 0.2rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-top: 2px solid #1AA7EC;
+}
+main nav ul li .cart_list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  margin: 0;
+  width: 200px;
+}
+main nav ul li .cart_list li .left {
+  display: flex;
+  flex-direction: column;
+}
+main nav ul li .cart_list li .right {
+  display: flex;
+}
+main nav ul li .cart_list li h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+main nav ul li .cart_list li p {
+  margin: 0;
+  font-size: 0.7rem;
+}
+main nav ul li .cart_list li button {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 0;
+  background-color: #1AA7EC;
+  font-family: Bebas Neue;
+}
+main nav ul li .cart_list li button:hover {
+  color: white;
+  cursor: pointer;
+}
+main nav ul li a {
+  font-family: Bebas Neue;
+  text-decoration: none;
+  color: black;
+}
+main nav ul li a span {
+  padding: 5px;
+  color: white;
+  background-color: #1AA7EC;
+}
+main .mini_nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+main .mini_nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.8rem;
+}
+main .mini_nav ul li {
+  font-family: Bebas Neue;
+  position: relative;
+}
+main .mini_nav ul li a {
+  font-family: Bebas Neue;
+  text-decoration: none;
+  color: black;
+}
+main .mini_nav ul li:hover #dropdown {
+  display: block;
+}
+main .mini_nav ul li .Search {
+  position: absolute;
+  top: -11px;
+  right: -250px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid #c5d9e3;
+}
+main .mini_nav ul li .Search button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #1AA7EC;
+  border: 0px;
+  padding: 5px;
+}
+main .mini_nav ul li .Search input {
+  height: 80%;
+  outline: none;
+  border: 0px;
+}
+main .mini_nav ul li #dropdown {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 70px;
+  background-color: white;
+  z-index: 1;
+  font-family: Bebas Neue;
+  border: 0px;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+}
+main .mini_nav ul li #dropdown option {
+  flex-direction: column;
+  text-align: left;
+  padding: 5px;
+  text-align: left;
+  border: 0;
+  margin: 10px;
+}
+main .mini_nav ul li #dropdown option:hover {
+  cursor: pointer;
+  background-color: #1AA7EC;
+  color: white;
+}
+main header {
+  height: 30vh;
+  background-color: #1AA7EC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main header h1 {
+  font-family: Bebas Neue;
+  margin: 0;
+  padding: 0;
+  font-size: 6rem;
+}
+main #wishlistContainer {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+}
+main #wishlistContainer article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+main #wishlistContainer article .wish {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  gap: 10px;
+}
+main #wishlistContainer article .wish button {
+  color: red;
+  background-color: white;
+  border: 0px solid red;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+main #wishlistContainer article .wish button:hover {
+  color: black;
+  cursor: pointer;
+}
+main #wishlistContainer article .wish aside :nth-child(2) {
+  width: 200px;
+}
+main #wishlistContainer article .wish aside .synopsis {
+  margin-top: 10px;
+  width: 180px;
+  height: 50px;
+  text-wrap: wrap;
+}
+main #wishlistContainer article .wish aside img {
+  height: 200px;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+}
+main #wishlistContainer article h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+main #wishlistContainer article p:first-of-type {
+  margin: 0;
+  background-color: #1AA7EC;
+  padding: 5px;
+  padding-left: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+}
+main #wishlistContainer article aside:nth-of-type(2) {
+  border-left: 2px solid #c5d9e3;
+}
+main #wishlistContainer article aside:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+}
+main #wishlistContainer article p:nth-of-type(3) {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  background-color: #FFD700;
+  padding: 5px;
+}
+main #wishlistContainer article p:nth-of-type(4) {
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  padding: 5px;
+  width: 200px;
+  text-align: justify;
+  height: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+main #wishlistContainer article p {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+main .HomeFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+main .HomeFrame .Home {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+main .HomeFrame .Home aside {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .HomeFrame .Home aside div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+}
+main .HomeFrame .Home aside div h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+main .HomeFrame .Home aside div p {
+  font-size: 1rem;
+  margin: 0;
+}
+main .HomeFrame .Home .Left {
+  background-color: #1AA7EC;
+}
+main .HomeFrame .Home .Right {
+  background-image: url("https://blog.bridgemanimages.com/hubfs/book.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+main .AboutFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+main .AboutFrame .About {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+main .AboutFrame .About aside {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .AboutFrame .About aside div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+}
+main .AboutFrame .About aside div h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+main .AboutFrame .About aside div p {
+  font-size: 1rem;
+  margin: 0;
+}
+main .AboutFrame .About .Left {
+  background-color: #1AA7EC;
+  background-image: url("https://thenerddaily.com/wp-content/uploads/2019/10/September-2019-Book-Covers.jpg?x96779");
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+main .AboutFrame .About .Right {
+  background-color: white;
+}
+main .SocialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+}
+main .SocialMedia button {
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: #1AA7EC;
+  margin-bottom: 20px;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  border: 0;
+}
+main .SocialMedia button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+main .SocialMedia button i {
+  border: 0;
+}
+main .FormContact {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+main .FormContact .Form {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1AA7EC;
+  padding: 10px;
+  height: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .FormContact .Form h1 {
+  font-size: 2rem;
+  margin-bottom: 0px;
+}
+main .FormContact .Form h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+main .FormContact .Form form {
+  width: 400px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .FormContact .Form form div {
+  width: 92%;
+  gap: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+main .FormContact .Form form input {
+  width: 90%;
+  height: 30px;
+  border: 0px;
+}
+main .FormContact .Form form textarea {
+  width: 90%;
+  height: 90px;
+  resize: none;
+  border: 0px;
+}
+main .FormContact .Form form button {
+  background-color: white;
+  color: black;
+  height: 30px;
+  width: 50%;
+  border: 0px;
+  font-family: Bebas Neue;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+main .FormContact .Form form button:hover {
+  background-color: #1AA7EC;
+  border: 2px solid black;
+}
+main .ContactFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+main .ContactFrame .Contact {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+main .ContactFrame .Contact aside {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .ContactFrame .Contact aside div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+}
+main .ContactFrame .Contact aside div h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+main .ContactFrame .Contact aside div p {
+  font-size: 1rem;
+  margin: 0;
+}
+main .ContactFrame .Contact .Left {
+  background-color: #1AA7EC;
+}
+main .ContactFrame .Contact .Right {
+  background-color: white;
+  background-image: url("https://thenerddaily.com/wp-content/uploads/2019/07/July-2019-Best-Book-Covers.jpg?x16723");
+  background-size: cover;
+  background-position: center;
+}
+
+.ReviewFrame {
+  height: 30vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.ReviewFrame .Review {
+  width: 80%;
+  height: 100%;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ReviewFrame .Review .ReviewCard {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
+}
+.ReviewFrame .Review .ReviewCard h1 {
+  text-align: center;
+  margin-bottom: 2px;
+}
+.ReviewFrame .Review .ReviewCard .date {
+  margin: 0;
+}
+.ReviewFrame .Review .ReviewCard p {
+  width: 80%;
+  text-align: center;
+  overflow-y: scroll;
+}
+.ReviewFrame .Review .ReviewCard:nth-child(odd) {
+  background-color: #1AA7EC;
+}
+.ReviewFrame .Review .ReviewCard:nth-child(even) {
+  background-color: white;
+}
+
+.Filters {
+  width: 100%;
+}
+.Filters ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.Filters ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 150px;
+  padding: 10px;
+  font-size: 1.4rem;
+  text-wrap: wrap;
+}
+
+.AboutFrameLocation {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  height: 70vh;
+}
+.AboutFrameLocation .Location {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AboutFrameLocation .Location aside {
+  height: 100%;
+  width: 100%;
+}
+.AboutFrameLocation .Location .text {
+  height: 90%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AboutFrameLocation .Location .text h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2px;
+}
+.AboutFrameLocation .Location .text h2 {
+  margin: 0px;
+  text-align: center;
+  font-size: 1rem;
+}
+.AboutFrameLocation .Location .text p {
+  width: 80%;
+}
+.AboutFrameLocation .Location iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.AboutFrameAreas {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  height: 30vh;
+}
+.AboutFrameAreas .Area {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.AboutFrameAreas .Area .LocaleCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
+  background-color: white;
+}
+.AboutFrameAreas .Area .LocaleCard img {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.AboutFrameAreas .Area .LocaleCard h1 {
+  text-align: center;
+  margin-bottom: 2px;
+  margin: 0;
+  font-size: 1.5rem;
+}
+.AboutFrameAreas .Area .LocaleCard h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+.AboutFrameAreas .Area .LocaleCard .date {
+  margin: 0;
+}
+.AboutFrameAreas .Area .LocaleCard p {
+  width: 80%;
+  text-align: center;
+  overflow-y: scroll;
+}
+.AboutFrameAreas .Area .LocaleCard:nth-child(even) {
+  background-color: #1AA7EC;
+}
+.AboutFrameAreas .Area .LocaleCard:nth-child(odd) {
+  background-color: white;
+}
+
+.BigFrame {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.BigFrame .Frames {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.BigFrame .Frames aside {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.BigFrame .Frames aside div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+}
+.BigFrame .Frames aside div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  margin: 10px;
+}
+.BigFrame .Frames aside div ul li i {
+  font-size: 1.5rem;
+}
+.BigFrame .Frames aside div ul li i:hover {
+  color: white;
+}
+.BigFrame .Frames aside div h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.BigFrame .Frames aside div p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.Merchandise {
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Merchandise .MerchandiseCollection {
+  width: 70%;
+  background-color: transparent;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Merchandise .MerchandiseCollection .MerchGrid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card {
+  height: 200px;
+  min-width: 200px;
+  flex: 0 0 auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .saleTag {
+  position: absolute;
+  bottom: 10px;
+  right: -30px;
+  rotate: -45deg;
+  background-color: #1AA7EC;
+  width: 100px;
+  padding: 5px;
+  font-size: 1.2rem;
+  animation: pulse 0.5s infinite;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .cart_button {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background-color: #1AA7EC;
+  color: black;
+  border: 0px;
+  padding: 5px;
+  width: 30px;
+  height: 32px;
+  display: none;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .cart_button p {
+  margin: 0;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .cart_button .price {
+  display: none;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .discount_button {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: #1AA7EC;
+  color: black;
+  border: 0px;
+  padding: 5px;
+  width: 30px;
+  height: 32px;
+  display: none;
+  font-family: Bebas Neue;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .discount_button p {
+  margin: 0;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .discount_button .discount {
+  display: none;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .wish_button {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  background-color: #1AA7EC;
+  color: black;
+  border: 0px;
+  padding: 5px;
+  width: 30px;
+  display: none;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .rating_button {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  background-color: #1AA7EC;
+  color: #FFD700;
+  border: 0px;
+  padding: 5px;
+  width: 30px;
+  display: none;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .rating_button p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  position: absolute;
+  font-size: 0.3rem;
+  top: 60%;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .Commands {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1AA7EC;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: Bebas Neue;
+  overflow: hidden;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .Commands ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .Commands ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0.2rem;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .Commands ul li p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  text-wrap: nowrap;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card .Commands ul li button {
+  border: 0px solid black;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover img {
+  transform: rotateY(360deg);
+  transition: 2s ease;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .Commands {
+  display: block;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .wish_button {
+  display: block;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .wish_button:hover {
+  width: 30px;
+  color: red;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .cart_button {
+  display: block;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .cart_button:hover {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .cart_button:hover i {
+  display: none;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .cart_button:hover .price {
+  display: block;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-family: Bebas Neue;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .discount_button {
+  display: block;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .discount_button:hover {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .discount_button:hover i {
+  display: none;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .discount_button:hover .discount {
+  display: block;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-family: Bebas Neue;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .rating_button {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .rating_button:hover {
+  color: yellow;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card:hover .rating_button:hover p {
+  visibility: visible;
+  opacity: 100%;
+  font-size: 0.3rem;
+  transition: 1s ease;
+  color: black;
+}
+.Merchandise .MerchandiseCollection .MerchGrid .Card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.CartSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+.CartSection .Total {
+  padding: 10px;
+  font-family: Bebas Neue;
+  width: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.CartSection .Total #Total {
+  padding: 10px;
+  width: 50%;
+  background-color: white;
+  font-family: Bebas Neue;
+  margin-top: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.CartSection .cart_list {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+.CartSection .cart_list li {
+  background-color: #1AA7EC;
+  list-style: none;
+  width: 200px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-wrap: nowrap;
+  position: relative;
+}
+.CartSection .cart_list li:hover {
+  cursor: pointer;
+}
+.CartSection .cart_list li:hover .options {
+  display: flex;
+}
+.CartSection .cart_list li .options {
+  display: none;
+  gap: 0.5rem;
+  width: 200px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+}
+.CartSection .cart_list li .options p {
+  margin: 0;
+  padding: 5px;
+  left: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.8rem;
+}
+.CartSection .cart_list li h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  margin: 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.CartSection .cart_list li button {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 0;
+  margin: 20px;
+  background-color: #1AA7EC;
+  font-family: Bebas Neue;
+  background-color: white;
+  padding: 5px;
+  width: 80%;
+  display: none;
+}
+.CartSection .cart_list li button:hover {
+  color: #1AA7EC;
+  cursor: pointer;
+}
+
+.WishSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.MissionFrame {
+  border: 1px solid black;
+  height: 300px;
+  width: 80%;
+}
+
+@keyframes StartingScrollL {
+  from {
+    scroll-snap-align: end;
+  }
+  to {
+    scroll-snap-align: start;
+  }
+}
+@keyframes pulse {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+@keyframes slideinL {
+  from {
+    transform: translateX(-800px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideinR {
+  from {
+    transform: translateX(800px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section {
+  flex: none;
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .alert {
+    position: fixed;
+    top: 3%;
+    width: 300px;
+    height: -moz-fit-content;
+    height: fit-content;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1AA7EC;
+    z-index: 5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .alert p {
+    font-size: 1.5rem;
+  }
+  main.Background.active {
+    filter: blur(20px);
+    pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .BookDeet {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    top: 40%;
+    left: 15%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1AA7EC;
+  }
+  .BookDeet .Frame {
+    width: 90%;
+    height: 90%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .BookDeet .Frame aside {
+    border: 1px solid white;
+    height: 100%;
+    width: 100%;
+  }
+  .popup {
+    display: flex;
+    flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    background-color: #1AA7EC;
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+  }
+  .popup .close {
+    width: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+  }
+  .popup .close:hover {
+    background-color: white;
+    border: 0;
+    outline: invert;
+  }
+  .popup form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  .popup input {
+    margin: 5px;
+    height: 20px;
+    border: 0px;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+  }
+  .popup button {
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 50%;
+    border: 0px;
+    font-family: Bebas Neue;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  .popup button:hover {
+    background-color: #1AA7EC;
+    border: 2px solid black;
+  }
+  #popup.active {
+    top: 25%;
+    visibility: visible;
+    opacity: 100%;
+    transition: 0.5s;
+  }
+  .popup1 {
+    display: flex;
+    flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    background-color: #1AA7EC;
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+  }
+  .popup1 .close {
+    width: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+  }
+  .popup1 .close:hover {
+    background-color: white;
+    border: 0;
+    outline: invert;
+  }
+  .popup1 div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .popup1 div input {
+    width: 110px;
+  }
+  .popup1 form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  .popup1 input {
+    margin: 5px;
+    height: 20px;
+    border: 0px;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+  }
+  .popup1 button {
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 50%;
+    border: 0px;
+    font-family: Bebas Neue;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  .popup1 button:hover {
+    background-color: #1AA7EC;
+    border: 2px solid black;
+  }
+  #popup1.active {
+    top: 25%;
+    visibility: visible;
+    opacity: 100%;
+    transition: 0.5s;
+  }
+  main {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  main Z nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+  }
+  main Z nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.2rem;
+    font-size: 0.8rem;
+  }
+  main Z nav ul li {
+    position: relative;
+    font-size: 0.8rem;
+  }
+  main Z nav ul li .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    right: -15px;
+    background-color: #1AA7EC;
+    padding: 0.3rem;
+    font-size: 0.6rem;
+    -webkit-clip-path: circle();
+            clip-path: circle();
+    color: white;
+  }
+  main Z nav ul li button {
+    border: 0;
+    background-color: white;
+    font-family: Bebas Neue;
+    text-decoration: none;
+    color: black;
+  }
+  main Z nav ul li button span {
+    padding: 5px;
+    color: white;
+    background-color: #1AA7EC;
+  }
+  main Z nav ul li:hover .cart_list {
+    display: none;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main Z nav ul li .cart_list {
+    position: absolute;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 200px;
+    width: 200px;
+    left: -170px;
+    top: 20px;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    padding: 0.2rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-top: 2px solid #1AA7EC;
+  }
+  main Z nav ul li .cart_list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin: 0;
+    width: 200px;
+  }
+  main Z nav ul li .cart_list li .left {
+    display: flex;
+    flex-direction: column;
+  }
+  main Z nav ul li .cart_list li .right {
+    display: flex;
+  }
+  main Z nav ul li .cart_list li h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  main Z nav ul li .cart_list li p {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+  main Z nav ul li .cart_list li button {
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 0;
+    background-color: #1AA7EC;
+    font-family: Bebas Neue;
+  }
+  main Z nav ul li .cart_list li button:hover {
+    color: white;
+    cursor: pointer;
+  }
+  main Z nav ul li a {
+    font-family: Bebas Neue;
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+  }
+  main Z nav ul li a span {
+    padding: 5px;
+    color: white;
+    background-color: #1AA7EC;
+  }
+  main .mini_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: visible;
+  }
+  main .mini_nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 0.8rem;
+  }
+  main .mini_nav ul li {
+    font-family: Bebas Neue;
+    position: relative;
+  }
+  main .mini_nav ul li a {
+    font-family: Bebas Neue;
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+  }
+  main .mini_nav ul li:hover #dropdown {
+    display: block;
+  }
+  main .mini_nav ul li select option {
+    font-size: 1rem;
+    background-color: white;
+  }
+  main .mini_nav ul li button {
+    font-size: 0.8rem;
+    text-wrap: nowrap;
+  }
+  main .mini_nav ul li .Search {
+    position: absolute;
+    top: 30px;
+    right: 50%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid #c5d9e3;
+  }
+  main .mini_nav ul li .Search button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #1AA7EC;
+    border: 0px;
+    padding: 5px;
+  }
+  main .mini_nav ul li .Search input {
+    height: 80%;
+    outline: none;
+    border: 0px;
+  }
+  main .mini_nav ul li #dropdown {
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    background-color: #1AA7EC;
+    z-index: 1;
+    font-family: Bebas Neue;
+    border: 0px;
+    outline: none;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  main .mini_nav ul li #dropdown option {
+    flex-direction: column;
+    text-align: left;
+    padding: 5px;
+    text-align: left;
+    border: 0;
+    margin: 10px;
+  }
+  main .mini_nav ul li #dropdown option:hover {
+    cursor: pointer;
+    background-color: #1AA7EC;
+    color: white;
+  }
+  main header {
+    height: 20vh;
+    background-color: #1AA7EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main header h1 {
+    font-family: Bebas Neue;
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+  }
+  main #wishlistContainer {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    place-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 20px;
+  }
+  main #wishlistContainer article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  main #wishlistContainer article .wish {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    gap: 10px;
+  }
+  main #wishlistContainer article .wish button {
+    color: red;
+    background-color: white;
+    border: 0px solid red;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  main #wishlistContainer article .wish button:hover {
+    color: black;
+    cursor: pointer;
+  }
+  main #wishlistContainer article .wish aside :nth-child(2) {
+    width: 200px;
+  }
+  main #wishlistContainer article .wish aside .synopsis {
+    margin-top: 10px;
+    width: 180px;
+    height: 50px;
+    text-wrap: wrap;
+  }
+  main #wishlistContainer article .wish aside img {
+    height: 150px;
+    width: 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center top;
+       object-position: center top;
+  }
+  main #wishlistContainer article h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  main #wishlistContainer article p:first-of-type {
+    margin: 0;
+    background-color: #1AA7EC;
+    padding: 5px;
+    padding-left: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+  }
+  main #wishlistContainer article aside:nth-of-type(2) {
+    border-left: 2px solid #c5d9e3;
+  }
+  main #wishlistContainer article aside:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+  }
+  main #wishlistContainer article p:nth-of-type(3) {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    background-color: #FFD700;
+    padding: 5px;
+  }
+  main #wishlistContainer article p:nth-of-type(4) {
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    padding: 5px;
+    width: 200px;
+    text-align: justify;
+    height: 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  main #wishlistContainer article p {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 0.8rem;
+  }
+  main .HomeFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+  }
+  main .HomeFrame .Home {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+  }
+  main .HomeFrame .Home aside {
+    width: 100%;
+    height: 100%;
+    overflow-y: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .HomeFrame .Home aside div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .HomeFrame .Home aside div h1 {
+    font-size: 0.6rem;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  main .HomeFrame .Home aside div p {
+    font-size: 0.4rem;
+    margin: 0;
+  }
+  main .HomeFrame .Home aside div p:first-of-type {
+    margin-bottom: 10px;
+  }
+  main .HomeFrame .Home aside div br {
+    display: none;
+  }
+  main .HomeFrame .Home .Left {
+    background-color: #1AA7EC;
+  }
+  main .HomeFrame .Home .Right {
+    background-image: url("https://blog.bridgemanimages.com/hubfs/book.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+  }
+  main .AboutFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+  }
+  main .AboutFrame .About {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+  }
+  main .AboutFrame .About aside {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .AboutFrame .About aside div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+  }
+  main .AboutFrame .About aside div h1 {
+    font-size: 0.6rem;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  main .AboutFrame .About aside div p {
+    font-size: 0.4rem;
+    margin: 0;
+  }
+  main .AboutFrame .About aside div p:first-of-type {
+    margin-bottom: 10px;
+  }
+  main .AboutFrame .About aside div br {
+    display: none;
+  }
+  main .AboutFrame .About .Left {
+    background-color: #1AA7EC;
+    background-image: url("https://thenerddaily.com/wp-content/uploads/2019/10/September-2019-Book-Covers.jpg?x96779");
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+  }
+  main .AboutFrame .About .Right {
+    background-color: white;
+  }
+  main .SocialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+  main .SocialMedia button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #1AA7EC;
+    margin-bottom: 20px;
+    -webkit-clip-path: circle();
+            clip-path: circle();
+    border: 0;
+  }
+  main .SocialMedia button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  main .SocialMedia button i {
+    border: 0;
+  }
+  main .FormContact {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .FormContact .Form {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1AA7EC;
+    padding: 10px;
+    height: 50%;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main .FormContact .Form h1 {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+  main .FormContact .Form h2 {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+  main .FormContact .Form form {
+    width: 80%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .FormContact .Form form div {
+    width: 92%;
+    gap: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  main .FormContact .Form form input {
+    width: 90%;
+    height: 30px;
+    border: 0px;
+  }
+  main .FormContact .Form form textarea {
+    width: 90%;
+    height: 90px;
+    resize: none;
+    border: 0px;
+  }
+  main .FormContact .Form form button {
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 50%;
+    border: 0px;
+    font-family: Bebas Neue;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  main .FormContact .Form form button:hover {
+    background-color: #1AA7EC;
+    border: 2px solid black;
+  }
+  main .ContactFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+  }
+  main .ContactFrame .Contact {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+  }
+  main .ContactFrame .Contact aside {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .ContactFrame .Contact aside div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+  }
+  main .ContactFrame .Contact aside div h1 {
+    font-size: 0.6rem;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  main .ContactFrame .Contact aside div p {
+    font-size: 0.4rem;
+    margin: 0;
+  }
+  main .ContactFrame .Contact aside div p:first-of-type {
+    margin-bottom: 10px;
+  }
+  main .ContactFrame .Contact aside div br {
+    display: none;
+  }
+  main .ContactFrame .Contact .Left {
+    background-color: #1AA7EC;
+  }
+  main .ContactFrame .Contact .Right {
+    background-color: white;
+    background-image: url("https://thenerddaily.com/wp-content/uploads/2019/07/July-2019-Best-Book-Covers.jpg?x16723");
+    background-size: cover;
+    background-position: center;
+  }
+  .ReviewFrame {
+    height: 10vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .ReviewFrame .Review {
+    width: 80%;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ReviewFrame .Review .ReviewCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .ReviewFrame .Review .ReviewCard h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    font-size: 0.2rem;
+  }
+  .ReviewFrame .Review .ReviewCard .date {
+    margin: 0;
+  }
+  .ReviewFrame .Review .ReviewCard p {
+    height: 50%;
+    width: 80%;
+    text-align: center;
+    overflow-y: scroll;
+    font-size: 0.3rem;
+  }
+  .ReviewFrame .Review .ReviewCard:nth-child(odd) {
+    background-color: #1AA7EC;
+  }
+  .ReviewFrame .Review .ReviewCard:nth-child(even) {
+    background-color: white;
+  }
+  .Filters {
+    display: flex;
+    width: 100%;
+  }
+  .Filters ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .Filters ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px;
+    font-size: 0.6rem;
+    text-wrap: nowrap;
+  }
+  .res {
+    display: none;
+  }
+  .AboutFrameLocation {
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    height: 30vh;
+  }
+  .AboutFrameLocation .Location {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .AboutFrameLocation .Location aside {
+    height: 100%;
+    width: 100%;
+  }
+  .AboutFrameLocation .Location .img {
+    background-size: cover;
+  }
+  .AboutFrameLocation .Location .text {
+    height: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .AboutFrameLocation .Location .text h1 {
+    font-size: 0.6rem;
+    text-align: center;
+    margin-bottom: 2px;
+    text-wrap: nowrap;
+  }
+  .AboutFrameLocation .Location .text h2 {
+    margin: 0px;
+    text-align: center;
+    font-size: 0.4rem;
+  }
+  .AboutFrameLocation .Location .text p {
+    width: 80%;
+    font-size: 0.3rem;
+  }
+  .AboutFrameLocation .Location iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .AboutFrameAreas {
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    height: 15vh;
+  }
+  .AboutFrameAreas .Area {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .AboutFrameAreas .Area .LocaleCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60px;
+    width: 60px;
+    background-color: white;
+  }
+  .AboutFrameAreas .Area .LocaleCard img {
+    height: 50%;
+    width: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .AboutFrameAreas .Area .LocaleCard h1 {
+    text-align: center;
+    margin-bottom: 2px;
+    margin: 0;
+    font-size: 0.6rem;
+  }
+  .AboutFrameAreas .Area .LocaleCard h2 {
+    font-size: 0.4rem;
+    margin: 0;
+  }
+  .AboutFrameAreas .Area .LocaleCard .date {
+    margin: 0;
+  }
+  .AboutFrameAreas .Area .LocaleCard p {
+    width: 80%;
+    text-align: center;
+    overflow-y: scroll;
+  }
+  .AboutFrameAreas .Area .LocaleCard:nth-child(even) {
+    background-color: #1AA7EC;
+  }
+  .AboutFrameAreas .Area .LocaleCard:nth-child(odd) {
+    background-color: white;
+  }
+  .BigFrame {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .BigFrame .Frames {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .BigFrame .Frames aside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .BigFrame .Frames aside div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+  }
+  .BigFrame .Frames aside div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    margin: 0px;
+  }
+  .BigFrame .Frames aside div ul li i {
+    font-size: 0.5rem;
+  }
+  .BigFrame .Frames aside div ul li i:hover {
+    color: white;
+  }
+  .BigFrame .Frames aside div h1 {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .BigFrame .Frames aside div p {
+    font-size: 0.3rem;
+    margin: 0;
+  }
+  .Merchandise {
+    background-color: transparent;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .Merchandise .MerchandiseCollection {
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid {
+    display: grid;
+    height: 100%;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card {
+    height: 100%;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    flex: 0 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .saleTag {
+    position: absolute;
+    bottom: 30px;
+    right: -30px;
+    rotate: -45deg;
+    background-color: #1AA7EC;
+    width: 100px;
+    padding: 2px;
+    font-size: 1.4em;
+    animation: pulse 0.5s infinite;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .cart_button {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background-color: #1AA7EC;
+    color: black;
+    border: 0px;
+    padding: 5px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: none;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .cart_button p {
+    margin: 0;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .cart_button i {
+    display: none;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .cart_button .price {
+    display: block;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-family: Bebas Neue;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .discount_button {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #1AA7EC;
+    color: black;
+    border: 0px;
+    padding: 5px;
+    width: 30px;
+    height: 32px;
+    display: none;
+    font-family: Bebas Neue;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .discount_button p {
+    margin: 0;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .discount_button .discount {
+    display: none;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .wish_button {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    background-color: #1AA7EC;
+    color: black;
+    border: 0px;
+    padding: 5px;
+    width: 30px;
+    display: none;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .rating_button {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    background-color: #1AA7EC;
+    color: #FFD700;
+    border: 0px;
+    padding: 5px;
+    width: 30px;
+    display: none;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .rating_button p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    position: absolute;
+    font-size: 1rem;
+    top: 60%;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .Commands {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1AA7EC;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-family: Bebas Neue;
+    overflow: hidden;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .Commands ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .Commands ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0.2rem;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .Commands ul li p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-wrap: nowrap;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card .Commands ul li button {
+    border: 0px solid black;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover img {
+    transform: rotateY(360deg);
+    transition: 2s ease;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .Commands {
+    display: block;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .wish_button {
+    display: block;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .wish_button:hover {
+    width: 30px;
+    color: red;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .cart_button {
+    display: block;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .cart_button:hover {
+    width: -moz-fit-content;
+    width: fit-content;
+    color: white;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .cart_button:hover i {
+    display: none;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .cart_button:hover .price {
+    display: block;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-family: Bebas Neue;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .discount_button {
+    display: block;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .discount_button:hover {
+    width: -moz-fit-content;
+    width: fit-content;
+    color: white;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .discount_button:hover i {
+    display: none;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .discount_button:hover .discount {
+    display: block;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-family: Bebas Neue;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .rating_button {
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .rating_button:hover {
+    color: yellow;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card:hover .rating_button:hover p {
+    visibility: visible;
+    opacity: 100%;
+    font-size: 0.3rem;
+    transition: 1s ease;
+    color: black;
+  }
+  .Merchandise .MerchandiseCollection .MerchGrid .Card img {
+    width: 100%;
+    max-width: 150px;
+    max-height: 150px;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .CartSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    padding-top: 20px;
+    position: relative;
+  }
+  .CartSection .Total {
+    padding: 10px;
+    font-family: Bebas Neue;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .CartSection .Total #Total {
+    padding: 10px;
+    width: 50%;
+    background-color: white;
+    font-family: Bebas Neue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .CartSection .cart_list {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: none;
+    place-items: center;
+  }
+  .CartSection .cart_list li {
+    background-color: #1AA7EC;
+    list-style: none;
+    width: 200px;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-wrap: nowrap;
+    position: relative;
+  }
+  .CartSection .cart_list li:hover {
+    cursor: pointer;
+  }
+  .CartSection .cart_list li:hover .options {
+    display: flex;
+  }
+  .CartSection .cart_list li:hover button {
+    display: flex;
+  }
+  .CartSection .cart_list li .options {
+    display: none;
+    gap: 0.5rem;
+    width: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+  }
+  .CartSection .cart_list li .options p {
+    margin: 0;
+    padding: 5px;
+    left: 0;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 0.8rem;
+  }
+  .CartSection .cart_list li h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    margin: 0;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .CartSection .cart_list li button {
+    width: -moz-fit-content;
+    width: fit-content;
+    position: absolute;
+    top: -15px;
+    right: -65px;
+    border: 0;
+    background-color: #1AA7EC;
+    font-family: Bebas Neue;
+    background-color: white;
+    padding: 5px;
+    width: fit-content;
+    display: none;
+  }
+  .CartSection .cart_list li button:hover {
+    color: #1AA7EC;
+    cursor: pointer;
+  }
+  .WishSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .MissionFrame {
+    border: 1px solid black;
+    height: 300px;
+    width: 80%;
+  }
+}/*# sourceMappingURL=styles.css.map */

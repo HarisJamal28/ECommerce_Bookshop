@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOMMERCE - ABOUT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Calistoga&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="popup" id="popup">
+        <h1>Login</h1>
+        <button class="close" onclick="toggle()">X</button>
+        <form action="">
+            <label for=""></label>
+            <input type="text" placeholder="Username">
+            <label for=""></label>
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Password">
+            <button onclick="toggle()">SUBMIT</button>
+        </form>
+    </div>
+    <div class="popup1" id="popup1">
+        <h1>Signup</h1>
+        <button class="close" onclick="toggleSignup()">X</button>
+        <form action="">
+            <div>
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Password">
+            <button onclick="toggleSignup()">SUBMIT</button>
+        </form>
+    </div>
+    <main  class="Background" id="blur">
+        <nav>
+            <ul>
+                <li><a href=""></a></li>
+            </ul>
+            <ul>
+                <li><a href="./wishlist.html">WISHLIST</a></li>
+                <li><a href="./cart.html">CART</a></li>
+                <li><button onclick="toggle()">LOGIN</button></li>
+                <li><button onclick="toggleSignup()"><span>SIGN UP</span></button></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>BOOKBOUND</h1>
+        </header>
+        <nav class="mini_nav">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./browse.html">BROWSE</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <br>
+        <section class="SocialMedia">
+            <button><i class="fa-solid fa-brands fa-instagram"></i></button>
+            <button><i class="fa-solid fa-brands fa-snapchat"></i></button>
+            <button><i class="fa-solid fa-brands fa-x-twitter"></i></button>
+        </section>
+        <section class="FormContact">
+            <section class="Form">
+                <h1>HIT US UP!</h1>
+                <h2>Got a question or feedback? Drop us a line, we’re all ears</h2>
+                <form action="">
+                    <input type="text" placeholder="Full Name">
+
+                    <div>
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Password">
+                    </div>
+
+                    <textarea name="" id=""></textarea>
+                    <button>SUBMIT</button>
+                </form>
+            </section>
+        </section>
+    </main>
+<script src="./logic.js"></script>
+</body>
+</html>
